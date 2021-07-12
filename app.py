@@ -1,6 +1,5 @@
 import requests
 
-
 API_link = 'https://api.telegram.org/bot1866728685:AAGo8t8D7Y2kYlTsNJ0Dr-ZBKDss6P2KR90'
 
 updates = requests.get(API_link + '/getUpdates?offset=-1').json()
