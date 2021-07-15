@@ -1,9 +1,9 @@
 from aiogram import Bot, Dispatcher, executor, types
-from conf import API_TOKEN, token_kap
-import koshelek_api as ks
+from config import API_TOKEN
+import convert_curl as cc
 import keyboards as kb
 import logging
-import convert_curl
+
 
 # Настроить ведение журнала
 logging.basicConfig(level=logging.INFO)
@@ -16,9 +16,9 @@ dp = Dispatcher(bot)
 command_bot = ['Регистрация', 'Войти', 'Обновить', 'Смена пароля', '2 факт. аутент.', 'Выйти', 'Выгнать', 'ip_address']
 
 # Создание словаря
-dict_btn = {'Регистрация': 'в разработке...', 'Войти': convert_curl.response_log, 'Обновить': convert_curl.response_wal,
-            'Смена пароля': 'в разработке...', '2 факт. аутент.': 'в разработке...', 'Выйти': convert_curl.response_out,
-            'Выгнать': 'в разработке...', 'ip_address': convert_curl.response_ip}
+dict_btn = {'Регистрация': 'в разработке...', 'Войти': cc.response_log, 'Обновить': cc.response_wal,
+            'Смена пароля': 'в разработке...', '2 факт. аутент.': 'в разработке...', 'Выйти': cc.response_out,
+            'Выгнать': 'в разработке...', 'ip_address': cc.response_ip}
 
 
 @dp.message_handler(commands=['start', 'help'])

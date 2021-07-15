@@ -1,5 +1,5 @@
 import requests
-import conf
+from config import token_kap
 
 # Аутентификация по почте, паролю и переданному токену капчи
 headers = {'accept': 'text/plain', 'Content-Type': 'text/json'}
