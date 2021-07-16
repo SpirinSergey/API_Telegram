@@ -1,4 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 
 # кнопки
 btn_reg = KeyboardButton('Регистрация')
@@ -18,3 +18,7 @@ start_kb = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add
 # -клавиатура после аутентификации
 log_kb = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).row(
     btn_ref, btn_2fa, btn_pwd, btn_out)
+
+# keyboards.py
+inline_btn_1 = InlineKeyboardButton('Первая кнопка!', callback_data='button1')
+inline_kb1 = InlineKeyboardMarkup().add(inline_btn_1)
